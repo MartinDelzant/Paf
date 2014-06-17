@@ -36,7 +36,9 @@ function traitement(){
         .style("font-family", "Impact")
         .style("fill", function(d, i) { return fill(i); })
         .attr("text-anchor", "middle")
-	  .on("click", function(d){alert('Tu cliques');})
+	  .on("click", function(d){
+	      window.open('http://www.google.com/search?q='+d.text,'_blank');
+})
         .attr("transform", function(d) {
           return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
         })
