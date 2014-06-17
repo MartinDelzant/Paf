@@ -36,6 +36,7 @@ function traitement(){
         .style("font-family", "Impact")
         .style("fill", function(d, i) { return fill(i); })
         .attr("text-anchor", "middle")
+	  .on("click", function(d){alert('Tu cliques');})
         .attr("transform", function(d) {
           return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
         })
