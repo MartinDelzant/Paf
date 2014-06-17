@@ -1,6 +1,6 @@
 
   var fill = d3.scale.category20();
-var donnees, mots;
+var donnees;
 
 d3.csv("dataworldcloud.csv", function(d) {
   return {
@@ -10,7 +10,6 @@ d3.csv("dataworldcloud.csv", function(d) {
   }, function(error, rows){
 	donnees = rows;
 	traitement();
-      }
 });
 
 function traitement(){
@@ -37,10 +36,8 @@ function traitement(){
         .style("font-family", "Impact")
         .style("fill", function(d, i) { return fill(i); })
         .attr("text-anchor", "middle")
-          .on("click", function() { alert('test'); })
         .attr("transform", function(d) {
           return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
         })
         .text(function(d) { return d.text; });
   }
-
