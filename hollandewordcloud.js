@@ -2,13 +2,16 @@
   var fill = d3.scale.category20();
 var donnees;
 
-d3.csv("dataworldcloud.csv", function(d) {
+
+ 
+
+d3.csv("hollande.csv", function(d) {
   return {
     text: d.text, 
     size: +d.size
     };
   }, function(error, rows){
-	donnees = rows;
+  donnees = rows;
 	traitement();
 });
 
@@ -47,5 +50,16 @@ function traitement(){
           return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
         })
         .text(function(d) { return d.text; });
+        
+        
   }
-
+  
+ function updated(element)
+{
+    var idx=element.selectedIndex;
+    var val=element.options[idx].value;
+    var content=element.options[idx].innerHTML;
+    if (content=="De Gaulle" ){
+     document.location.href="degaullewordcloud.html";}
+    
+ }
