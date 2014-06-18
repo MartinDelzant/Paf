@@ -39,6 +39,10 @@ function traitement(){
 	  .on("click", function(d){
 	      window.open('http://www.google.com/search?q='+d.text,'_blank');
 })
+.on("mouseover", function(){
+	this.style.fontSize = 5 + parseInt(this.style.fontSize) ;})
+	.on("mouseout", function(){
+	this.style.fontSize = -5 + parseInt(this.style.fontSize) ;})
         .attr("transform", function(d) {
           return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
         })
