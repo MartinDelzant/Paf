@@ -1,3 +1,8 @@
+#wrapper{ 
+          max-width:1000px;
+          margin : auto ;
+}
+
 #g-chart {
   overflow: hidden;
   position: relative;
@@ -377,3 +382,5 @@ a.g-label {
   font-size: 26px;
   margin: 25px auto 4px auto;
 }
+
+/*******/
