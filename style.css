@@ -1,0 +1,155 @@
+.NYT5Style .masthead-tools #bar1-singlepanel  {
+    display: inline;
+    vertical-align: top;
+}
+#bar1-singlepanel {
+  border:none;
+  position: relative;
+}
+.bar1_hover {
+    opacity: 0;
+}
+.sub_small_hide{
+    display: none;
+}
+#bar1-singlepanel > a {
+    -moz-box-sizing: border-box;
+    background-color: #6288A5;
+    border: 1px solid #4D7B9F;
+    border-radius: 3px;
+    color: #FFFFFF !important;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: nyt-franklin,nyt-franklin-1,'Helvetica Neue',Arial,sans-serif;
+    padding: 7px 10px 6px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#bar1-singlepanel > a:hover {
+    background-color: #326891;
+    border: 1px solid #265E8B;
+    text-decoration: none;
+}
+#hovercard {
+    width: 225px;
+    height: 330px;
+    display :none;
+    z-index: 99999999;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: -55px;
+    top: 30px;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+    text-align: left;
+}
+#hovercard:before {
+    content: url(http://graphics8.nytimes.com/marketing/bar1jsimages/arrowup.png);
+    position: absolute;
+    left: 0;
+    top: -16px;
+    width: 218px;
+    height: 18px;
+    text-align: center;
+    display: block;
+    z-index: 1;
+}
+h3.hover-title,
+.NYT5Style h3.hover-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    font-family: 'nyt-franklin','Helvetica Neue',Arial,sans-serif;
+    color: #000;
+    width: 190px;
+    font-style: normal;
+    white-space: normal;
+}
+.split-dig {
+    width: 224px;
+    border-right: 1px solid #F1F1F1;
+    margin: 0;
+    padding: 0;
+    min-height: 330px;
+    background: #fff url('http://graphics8.nytimes.com/adx/images/ADS/37/60/ad.376000/devices_tri_201401_inyt.png') center 34px no-repeat;
+    float: left;
+    position: relative;
+}
+.split-dig h3 a,
+.split-dig p a {
+    color: #000 !important;
+    text-decoration: none !important;
+    display: block;
+}
+.split-dig-content {
+    padding: 145px 0 0 17px;
+}
+.split-dig:hover {
+  background-color: #F2F6F9;
+}
+.hover-subhead {
+    font-family: 'nyt-franklin', 'Helvetica Neue', Arial;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+    margin-top: 14px;
+    width: 185px;
+    white-space: normal;
+}
+a.nyt-button-actions {
+    background: #F7F7F5;
+    color: #6E6E6C;
+    width: 188px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;  
+    border: 1px solid #ccc !important;
+    text-transform: uppercase;
+    font: 11px "nyt-franklin","Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+    padding: 6px 0;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    bottom:15px;
+}
+a.nyt-button-actions:hover {
+    background: #3C6791; 
+    color: #fff !important;
+    text-decoration: none !important;
+}
+a.nyt-button-actions.highlightButton:link,
+a.nyt-button-actions.highlightButton:visited {
+        color: #fff;
+        background: #3C6791; 
+        text-decoration: none !important;
+}
+.NYT5Style #hovercard {
+  top: 26px;
+}
+.NYT5Style #hovercard:before {
+  top: -15px;
+}
+/* WEBKIT ONLY RULES */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #hovercard {
+    top: 33px;
+    left: -55px;
+  }
+  .NYT5Style #hovercard{
+    top: 33px;
+    left: -165px;
+  }
+  .NYT5Style #home #hovercard,
+  #home #hovercard {
+    left: -55px;
+  }
+}
+/* EXCLUDING NYT4 INTERACTIVES */
+#interactiveABC #bar1-singlepanel {
+   display: none;
+}
