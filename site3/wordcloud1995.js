@@ -1,6 +1,6 @@
 
-  var fill = d3.scale.category20();
-var donnees;
+  var fill1 = d3.scale.category20();
+var donnees1;
 
 d3.csv("hollande.csv", function(d) {
   return {
@@ -8,22 +8,22 @@ d3.csv("hollande.csv", function(d) {
     size: +d.size
     };
   }, function(error, rows){
-	donnees = rows;
-	traitement();
+	donnees1 = rows;
+	traitement1();
 });
 
-function traitement(){
+function traitement1(){
   d3.layout.cloud().size([1000, 1000])
-      .words(donnees)
+      .words(donnees1)
       .padding(5)
       .rotate(function() { return ~~ (Math.random()*2) * 90; })
       .font("Impact")
       .fontSize(function(d) { return d.size; })
-      .on("end", draw)
+      .on("end", draw1)
       .start();
 }
 
-  function draw(words) {
+  function draw1(words) {
     d3.select("#wc1995").append("svg")
         .attr("width", 1000)
         .attr("height", 1000)
@@ -34,7 +34,7 @@ function traitement(){
       .enter().append("text")
         .style("font-size", function(d) { return d.size + "px"; })
         .style("font-family", "Impact")
-        .style("fill", function(d, i) { return fill(i); })
+        .style("fill1", function(d, i) { return fill1(i); })
         .attr("text-anchor", "middle")
 	.on("mouseover", function(){
 	this.style.fontSize = 5 + parseInt(this.style.fontSize) ;})
