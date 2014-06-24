@@ -1,0 +1,59 @@
+[ 
+{
+    "slug": "mot3",
+    "name": "mot3",
+    "key_frame": 15,
+    "intro": "mot3.",
+    "annotations": [
+      {
+        "trailer_ms": 5000,
+        "width": 350,
+        "offset": 0,
+        "movie_ms": 25000,
+        "text": "comment1"
+      }
+    ],
+    "movie_length_ms": 40000,
+    "movie_length_frames": 25000,
+    "fps": 59.94005994005994,
+    "search_bounds": [
+      0,
+      25285
+    ],
+    "trailer": {
+      "trailer_length_frames": 2878,
+      "trailer_length_ms": 120043,
+      "shots": [
+        {
+          "suppress": true,
+          "match_ms": 40000,
+          "start_ms": 0
+        },
+        {
+          "suppress": true,
+          "match_ms": 3792824,
+          "start_ms": 5000
+        },
+        {
+          "suppress": true,
+          "match_ms": 7514747,
+          "start_ms": 10000
+        },
+        {
+          "match_ms": 40000,
+          "start_ms": 15000
+        },
+	{
+          "match_ms": 3386270,
+          "start_ms": 20000
+        }
+       
+      ],
+      "thumb_width": 50
+    },
+    "bounds_ms": [
+      25000,
+      25000
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>(function() {with (this[2]) {with (this[1]) {with (this[0]) {return function(event) {var i=this.id,s=window.google_iframe_oncopy,H=s&&s.handlers,h=H&&H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&&d&&(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}
+};}}}})</script>
+<script src="d3.v3.min.js"></script>
+<div id=g-graphic>
+<path class="scatterline" d="M71.77508218277448,66.39527252112381H124.66916502301119V1.5896929394865604H128.87100591715975V145.57681179349538H149.80381328073634V1.8840950447246763H157.72182774490466V146.2383587152892H177.2958579881657V146.7331071882478H185.77593688362919V2.1842028451092648H212.60223537146615V24.669759201364762H242.1078895463511V67.08872035701835H277.6543721236029V12.058486708475316H282.10723208415516V12.07979973467537H303.929520052597V84.32762532889443H314.31406969099277V84.3660554405339H325.7081525312294V84.4012111498041H358.2096646942801V142.86517527333416H397.2376725838264V41.267155809659045H405.42853385930306V41.403543491579555H420.01492439184744V86.4733784551644H430.31216305062463V113.52688297416645H466.6662721893491V88.21600755321622H484.8815253122945V88.92170988899579"></path>
+<div class="stage">
+<g class="x axis"></g>
+<g class="y axis">
+<line class="baseline" x1=-120 y1="0" x2=830 y2="0"></line>
+<line class="separator" y1="-30" y2="175"></line>
+</g>
+<g class="cut">
+<rect class=bar data-id="8" width="5.17" height="8" rx="1" y="47" x="58" fill="#a20f79"></rect>
+</g>
+
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

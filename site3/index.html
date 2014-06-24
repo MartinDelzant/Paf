@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Test NYTimes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/global.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <form id="g-form">
+	<input type="text" name="search" placeholder="Add word or phrase" tabindex="1"><button>+</button>
+      </form>
+      <div id="g-chart">
+	<div class="g-legend" style="position:absolute;width:970px;">
+	  <div class="g-democrat g-arrow">Words favored<br>by Democrats</div>
+	  <div class="g-republican g-arrow">Words favored<br>by Republicans</div>
+	  <div class="g-overview">Number of mentions per 25,000 spoken words<br>by <span class="g-swatch g-democrat"></span>Democrats and <span class="g-swatch g-republican"></span>Republicans</div>
+	</div>
+	<div class="g-notes">
+	  <div class="g-note" style="left:20px;">
+	    <b>Thème</b>
+	    Mettre un commentaire sur le thème ici !
+	  </div>
+	</div>
+	<div class="g-labels">
+        </div>
+	<svg class="g-nodes" width="970" height="540">	  
+	</svg>
+      </div>
+      
+      <div class="g-body">
+	<div class="g-mentions g-democrat">
+	  <h3 class="g-head g-hasnt-topic">
+	    <span class="g-isnt-topic"><br>Extrait de gauche</span>
+	    <span class="g-is-topic"><span style="padding-left: 0.76em;">Democrats</span> mentioned <a>…</a><br><span class="g-count"></span> times per 25,000 words</span>
+	  </h3>
+	  <div class="g-divider"></div>
+	  <div class="g-truncated">Due to a large number of mentions, only a sampling of excerpts are shown.</div>
+	</div>
+	<div class="g-mentions g-republican">
+	  <h3 class="g-head g-hasnt-topic">
+	    <span class="g-isnt-topic"><br>Extrait de droite</span>
+	    <span class="g-is-topic">Republicans mentioned <a>…</a><br><span class="g-count"></span> times per 25,000 words</span>
+	  </h3>
+	  <div class="g-divider"></div>
+	  <div class="g-truncated">Due to a large number of mentions, only a sampling of excerpts are shown.</div>
+	</div>
+	<br clear="all"><br>
+      </div>
+      <script src="js/d3.v2.min.js"></script>
+      <script src="js/index.js"></script>
+    </div>
+
+  </body>
+</html>
