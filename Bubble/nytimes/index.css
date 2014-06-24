@@ -157,30 +157,30 @@
 }
 
 .g-node .g-democrat {
-  fill: #c5d7ea;
+  fill: #f9caca;
 }
 
 .g-node.g-hover .g-democrat {
-  fill: #acbed1; /* darker(.5) */
+  fill: #dfb1b1; /* darker(.5) */
 }
 
 .g-node.g-selected .g-democrat {
-  fill: #99c0e5; /* c *= 2, darker(.5) */
-  stroke: #6081a3; /* c *= 2, darker(2) */
+  fill: #fda4a7; /* c *= 2, darker(.5) */
+  stroke: #af5e61; /* c *= 2, darker(2) */
   stroke-width: 1.5px;
 }
 
 .g-node .g-republican {
-  fill: #f9caca;
+  fill: #c5d7ea;
 }
 
 .g-node.g-hover .g-republican {
-  fill: #dfb1b1; /* darker(.5) */
+  fill: #acbed1; /* darker(.5) */
 }
 
 .g-node.g-selected .g-republican {
-  fill: #fda4a7; /* c *= 2, darker(.5) */
-  stroke: #af5e61; /* c *= 2, darker(2) */
+  fill: #99c0e5; /* c *= 2, darker(.5) */
+  stroke: #6081a3; /* c *= 2, darker(2) */
   stroke-width: 1.5px;
 }
 
@@ -298,13 +298,13 @@ a.g-label {
 }
 
 .g-democrat a {
-  background-color: #c5d7ea;
-  color: #4a5783;
+  background-color: #fbdedf;
+  color: #734143;
 }
 
 .g-republican a {
-  background-color: #fbdedf;
-  color: #734143;
+  background-color: #c5d7ea;
+  color: #4a5783;
 }
 
 .g-mention p:before,
