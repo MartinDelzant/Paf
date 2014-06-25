@@ -376,6 +376,14 @@
         .attr("y", -22)
         .text("Frequence d'utilisation");
 
+ svg.append("g")
+        .attr("class", "x axis")
+        .call(xAxis)
+      .append("text")
+        .attr("x", 7)
+        .attr("y", 0)
+        .text("100%");
+
     var frameLabel = svg.selectAll(".x.axis g:first-of-type text")
       .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
         .datum(null)
@@ -400,14 +408,14 @@
         .data(sections)
       .enter().append("g")
         .classed("section-marker", true)
-        .attr("transform", function(d) { return "translate(0," + movieScale(d.ms) + ")"; });
+        .attr("transform", function(d) { return "translate(0," + movieScale(d.ms-1000) + ")"; });
 
     sectionMarkers.append("rect")
         .attr("x", trailerScale(0))
         .attr("y", -height / 3)
         .attr("width", width + margin.right)
         .attr("height", height / 3)
-        .style("fill", function(d) { return color(d.ms - 1); });
+        .style("fill", function(d) { return color(d.ms -1000); });
 
     sectionMarkers.append("line")
         .classed("section-line", true)
@@ -419,7 +427,6 @@
         .attr("y", -height / 6)
         .attr("dy", ".35em")
         .attr("x", -15)
-        .style("fill", function(d) { return color(d.ms - 1); })
         .text(function(d) { return d.label; });
 
     var missingSection = yAxis.append("g")
