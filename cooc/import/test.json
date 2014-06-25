@@ -1,0 +1,8 @@
+[
+{"name":"paf.economie.budget","size":1759,"imports":["paf.economie.deficit"]},
+{"name":"paf.economie.impot","size":2165,"imports":["paf.economie.budget"]},
+{"name":"paf.economie.crise","size":586,"imports":["paf.social.chomage"]},
+{"name":"paf.social.emploi","size":3331,"imports":["paf.economie.impot"]},
+{"name":"paf.social.chomage","size":772,"imports":["paf.economie.impot"]},
+{"name":"paf.economie.deficit","size":3322,"imports":["paf.economie.budget","paf.economie.impot"]}
+]
