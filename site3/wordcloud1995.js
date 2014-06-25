@@ -34,7 +34,7 @@ function traitement1(){
       .enter().append("text")
         .style("font-size", function(d) { return d.size + "px"; })
         .style("font-family", "Impact")
-        .style("fill1", function(d, i) { return fill1(i); })
+        .style("fill", function(d, i) { return fill1(i); })
         .attr("text-anchor", "middle")
 	.on("mouseover", function(){
 	this.style.fontSize = 5 + parseInt(this.style.fontSize) ;})

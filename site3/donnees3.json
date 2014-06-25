@@ -1,0 +1,87 @@
+[
+  {
+    "slug": "Evolution temporelle de la complexité des débats par la méthode de Flesch-Kincaid",
+    "name": "Evolution temporelle de la complexité des débats par la méthode de Flesch-Kincaid",
+    "key_frame": 93,
+    "youtube": "tFvMk983Il8",
+    "intro": "Note : plus la valeur obtenue par cette méthode est faible, plus il est facile de comprendre le discours. Cependant, une faible valeur de Flesch-Kincaid n'indique pas forcément un discours moins riche",
+    "annotations": [
+      {
+        "trailer_ms": 500,
+        "width": 280,
+        "offset": 0,
+        "movie_ms": 1,
+        "text": "1988"
+      },
+      {
+        "trailer_ms": 1500,
+        "width": 210,
+        "offset": 0,
+        "movie_ms": 1,
+        "text": "1995"
+      },
+      {
+        "trailer_ms": 2500,
+        "width": 150,
+        "offset": 0,
+        "movie_ms": 1,
+        "text": "2002"
+      },
+{
+        "trailer_ms": 3500,
+        "width": 210,
+        "offset": 0,
+        "movie_ms": 1,
+        "text": "2007"
+      },
+
+{
+        "trailer_ms": 4500,
+        "width": 210,
+        "offset": 0,
+        "movie_ms": 1,
+        "text": "2012"
+      }
+
+    ],
+    "fps": 29.97002997002997,
+    "movie_length_frames": 175620,
+    "movie_length_ms": 50,
+    "search_bounds": [
+      0,
+      167083
+    ],
+    "bounds_ms": [
+      15812,
+      6967778
+    ],
+    "trailer": {
+      "thumb_width": 266,
+      "trailer_length_frames": 3793,
+      "trailer_length_ms": 151235,
+      "shots": [
+        {
+          "start_ms": 0,
+          "match_ms": 20.39,
+          "suppress": false
+        },
+        {
+          "start_ms": 1000,
+          "match_ms": 15.32
+        },
+        {
+          "start_ms": 2000,
+          "match_ms": 9.08
+        },
+        {
+          "start_ms": 3000,
+          "match_ms": 5.96
+        },
+        {
+          "start_ms": 4000,
+          "match_ms": 15.01
+        }
+      ]
+    }
+  }
+]

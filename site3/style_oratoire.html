@@ -29,22 +29,12 @@
 		}
     }
   	</script>
- <script src="d3.min.js"></script>
-<script src="d3.layout.cloud.js"></script>
-<script src="wordcloud1988.js"></script> 
-<script src="wordcloud1995.js"></script> 
+
   </head>
   <body>
   	<div class="site-header">
 		<div class="main-navigation">
-			<div class="responsive_menu">
-				<ul>
-					<li><a class="show-1 templatemo_home" href="#">1988</a></li>
-					<li><a class="show-2 templatemo_page2" href="#">1995</a></li>
-					<li><a class="show-3 templatemo_page3" href="#">2002</a></li>
-					<li><a class="show-5 templatemo_page5" href="#">2007</a></li>
-				</ul>
-			</div>
+			
 			<div class="container">
 				<div class="row templatemo_gallerygap">
 					<div class="col-md-12 responsive-menu">
@@ -53,86 +43,643 @@
 				        </a>
 					</div> <!-- /.col-md-12 -->
                     <div class="col-md-3 col-sm-12">
-                    	<a href="../site/accueil.html"><img src="images/logo.jpg" alt="Polygon Template"></a>
+                    	<a href="#"><img src="images/logo.jpg" alt="Polygon Template"></a>
                     </div>
 					<div class="col-md-9 main_menu">
-						<ul>
-							<li><a class="show-1 templatemo_home" href="#">
-                            	<span class="fa fa-users"></span>
-                                1988</a></li>
-							<li><a class="show-2 templatemo_page2" href="#">
-                            	<span class="fa fa-users"></span>
-                          	1995</a></li>
-							<li><a class="show-3 templatemo_page3" href="#">
-                            	<span class="fa fa-users"></span>
-                            	2002</a></li>
-							<li><a class="show-5 templatemo_page5" href="#">
-                            	<span class="fa fa-users"></span>
-                                2007</a></li>
-						</ul>
+				
+							
 					</div> <!-- /.col-md-12 -->
 				</div> <!-- /.row -->
 			</div> <!-- /.container -->
 		</div> <!-- /.main-navigation -->
 	</div> <!-- /.site-header -->
     <div id="menu-container">
-    <!-- 1988 start -->
+    <!-- gallery start -->
     <div class="content homepage" id="menu-1">
     <div class="container">
-	   <p><strong><em>1988</em></strong></p>
-	
-	    <div id="wc1988"></div>
+	   
 
-	</div>
-    <div class="container">
-    	<div class="row">
-        	
-        </div>
-    </div>
-    </div>
-      <!-- 1988 end -->
-    <!-- 1995 start -->
-    <div class="content team" id="menu-2">
-	<div class="container">  <p>1995</p>  
-	</div>
-	<div class="row">  
- 	<div class="templatemo_ourteam">
-     		<div id="wc1995"></div>
-            	
+<a name="top"></a>
+<div id="shell">
+
+<ul id="memberTools">
+
+<!-- ADXINFO classification="Text_Link" campaign="inyt2014_bar1_singlepanel_digi_euro_487JF" priority="6000" isInlineSafe="Y" width="0" height="0" --><!-- INYT Bar1 20140612.1130 ~dj.paris -->
+<style src="style.css">
+</style>
+
+
+<div id="interactiveFreeFormMain">
+<style>
+  #g-graphic {
+    font-family: arial;
+    padding: 10px;
+  }
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10000;
+    background-color: black;
+    background-color: rgba(0,0,0,0.8);
+  }
+  .lightbox .g-close-button {
+    display: block;
+    background: url(http://graphics8.nytimes.com/newsgraphics/2013/01/04/movie-marker/b1a9c2fc1689fd89ecff4a7d2be5e5757716e344/close-button.svg) no-repeat center left;
+    padding-left: 20px;
+    line-height: 30px;
+    width: 200px;
+    height: 30px;
+    text-transform: uppercase;
+    color: #666;
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .lightbox .g-close-button:hover {
+    opacity: 1;
+  }
+  .movie {
+    border-top: solid 1px #aaa;
+    position: relative;
+    margin: 0 0 20px;
+    padding-top: 25px;
+    height: 440px;
+  }
+  .movie h3 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+  }
+  .movie .intro {
+    font-family: Georgia;
+    color: #e7e7e7;
+    line-height: 1.5em;
+    font-size: 15px;
+    width: 640px;
+  }
+  .thumbnail-frame {
+    position: absolute;
+    top: 25px;
+    padding: 6px;
+    background-color: rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  .thumbnail-frame .play {
+    width: 35px;
+    height: 35px;
+    background: #333 url(http://graphics8.nytimes.com/newsgraphics/2013/01/04/movie-marker/b1a9c2fc1689fd89ecff4a7d2be5e5757716e344/triangle.png) no-repeat 9px center;
+    background-size: 17px;
+    border: solid 1px white;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    opacity: 0.5;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 35px;
+    overflow: hidden;
+    -webkit-transition-property: width, opacity;
+    -webkit-transition-duration: 0.2s, 0.3s;
+    -moz-transition-property: width, opacity;
+    -moz-transition-duration: 0.2s, 0.3s;
+    transition-property: width, opacity;
+    transition-duration: 0.2s, 0.3s;
+  }
+  .thumbnail-frame .label {
+    position: absolute;
+    left: 35px;
+  }
+  .thumbnail-frame:hover .play {
+    width: 90px;
+  }
+  .thumbnail-crop {
+    overflow: hidden;
+    position: relative;
+  }
+  .thumbnail-image {
+    position: absolute;
+  }
+  .annotation {
+    position: absolute;
+    font-size: 11px;
+    line-height: 1.4em;
+    color: #999;
+  }
+  .annotation-pointer {
+    stroke: #bbb;
+    stroke-opacity: 0.5;
+    shape-rendering: crispEdges;
+  }
+  .annotation-pointer rect {
+    fill: #666;
+    stroke: none;
+  }
+  .annotation-pointer path {
+    fill: none;
+    stroke: #999;
+  }
+  .movie svg, .annotations {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .stage {
+    height: 250px;
+    position: absolute;
+    top: 170px;
+  }
+  .bar-hover {
+    fill-opacity: 0;
+    shape-rendering: crispEdges;
+    pointer-events: all;
+  }
+  .cut:hover .bar {
+    stroke: #000;
+    stroke-width: 1.5px;
+  }
+  .bar-hover:hover {
+    fill-opacity: 0.05;
+  }
+  .axis {
+    shape-rendering: crispEdges;
+    font-size: 10px;
+    fill: #aaa;
+  }
+  .scatterline {
+    fill: none;
+    stroke: #ccc;
+    shape-rendering: crispEdges;
+  }
+  .domain {
+  }
+  .section-line,
+  .baseline {
+    stroke: #ddd;
+    color: #e7e7e7;
+  }
+  .section-line {
+    stroke-dasharray: 3,3;
+  }
+  .y.axis .separator {
+    stroke: #aaa;
+  }
+  .y.axis .label {
+    font-weight: bold;
+    font-size: 11px;
+    fill: #000;
+    text-anchor: end;
+  }
+  .y.axis .missing-section text {
+    fill: #aaa;
+    font-size: 11px;
+    text-anchor: end;
+  }
+  .y.axis .section-marker rect {
+    fill-opacity: .07;
+  }
+  .axis path {
+    display: none;
+  }
+  .x.axis .tick {
+    stroke: #ccc;
+  }
+  #main #interactiveFooter {
+    border-top:1px solid #ddd;
+    margin-top:10px;
+    padding-top:12px;
+  }
+  #main div.storyHeader h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    margin-top: 35px;
+    text-align: center;
+  }
+  #main div.storySummary {
+    width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.5em;
+  }
+</style>
+<div id="g-graphic"></div>
+<!--[if lte IE 8]>
+  <img src="http://graphics8.nytimes.com/newsgraphics/2013/01/04/movie-marker/b1a9c2fc1689fd89ecff4a7d2be5e5757716e344/fallback.png" alt="chart" class="nytg-fallback">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script src="d3.v3.min.js"></script>
+<script>
+(function() {
+  var margin = { "top": 30, "right": 0, "bottom": 40, "left": 120 };
+
+  var width = 500,
+      height = 220 - margin.top - margin.bottom;
+
+  var maxTrailerLength = 152100;
+
+  var frameTipHeight = 110,
+      frameMosaicColumns = 10;
+
+  var barHeight = 8,
+      missingSectionHeight = 25;
+
+  var trailerScale = d3.scale.linear()
+      .domain([0, 5000])
+      .range([0, 500]);
+
+  var formatDouble = d3.format("02d"),
+      formatSeconds = function(d) { }
+      formatTimecode = function(d) { if(d==0) {return "1988";} else if(d==1000) {return "1995";} else if(d==2000) {return "2002";} else if(d==3000) {return "2007";} else {return "2012";}; };
+
+  d3.json("donnees3.json", function(error, movies) {
+
+    var movie = d3.select("#g-graphic").selectAll(".movie")
+        .data(movies)
+      .enter().append("div")
+        .attr("class", "movie");
+
+    movie.append("h3")
+        .text(function(d) { return d.name; });
+
+    movie.append("p")
+        .classed("intro", true)
+        .html(function(d) { return d.intro; });
+
+    movie.each(renderMovie);
+
+    d3.selectAll(".x.axis g text")
+        .style("text-anchor", "start")
+        .attr("x", 7)
+        .attr("y", -7)
+
+    d3.selectAll(".x.axis .tick.minor")
+        .attr("y2", -4)
+
+    createLightbox();
+
+  });
+
+  function renderMovie(movieData, i) {
+    var movie = d3.select(this),
+        movieLength = movieData.movie_length_ms; //movieData.bounds_ms[1] - movieData.bounds_ms[0]
+        sectionDuration = movieLength / 3,
+        trailerData = movieData.trailer,
+        time_ms = trailerData.trailer_length_ms,
+        shotsData = trailerData.reviewed_shots || trailerData.shots;
+
+    shotsData.slice().reverse().forEach(function(shot) {
+      shot.length_ms = time_ms - (time_ms = shot.start_ms);
+      if (shot.missing || shot.suppress) {
+        shot.match_ms = -1;
+      }
+    });
+
+    var sections = [
+      {label: "", ms: sectionDuration},
+      {label: "", ms: sectionDuration * 2},
+      {label: "ordonnee", ms: sectionDuration * 3}
+    ];
+
+    var movieScale = d3.scale.linear()
+        .domain([1,movieLength ,0 ])
+        .range([(height + missingSectionHeight / 2), 0, height]);
+
+    var xAxis = d3.svg.axis()
+        .scale(trailerScale)
+        .tickSize(5)
+        .tickSize(15)
+        .tickValues([0, 30000, 60000, 90000,120000])
+        .orient("top")
+        .tickSubdivide(3)
+        .tickFormat(formatSeconds);
+
+    var line = d3.svg.line()
+        .x(function(d) { return movieScale(d.x); })
+        .y(function(d) { return d.y; })
+        .interpolate("cardinal");
+
+    var scatterLine = d3.svg.line()
+        .x(function(d) { return trailerScale(d.start_ms); })
+        .y(function(d) { return movieScale(d.match_ms); })
+        .interpolate("step-after");
+
+    var color = d3.scale.threshold()
+        .domain([0,sectionDuration, sectionDuration * 2])
+        .range(["#a20f79","#a20f79", "#a20f79", "#a20f79"]);
+
+    var frameTipWidth = movieData.trailer.thumb_width;
+
+    var stage = movie.append("div")
+        .classed("stage", true);
+
+    var svg = stage.append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var annotationPointers = svg.selectAll(".annotation-pointer")
+        .data(function(d) { return d.annotations; })
+      .enter().append("g")
+        .classed("annotation-pointer", true)
+        .attr("transform", function(d) { return "translate(" + trailerScale(d.trailer_ms) + "," + (0) + ")"; });
+
+    annotationPointers.append("line")
+        .attr("y1", height + missingSectionHeight + 10)
+        .attr("y2", function(d) { return movieScale(d.movie_ms) + barHeight; });
+
+    annotationPointers.append("path")
+        .attr("x", -1.5)
+        .attr("y", function(d) { return movieScale(d.movie_ms) + barHeight; })
+        .attr("d", function(d) {
+          var y = movieScale(d.movie_ms) + barHeight;
+          return "M -3 " + (y + 3) + " L 0 " + y + " L 3 " + (y + 3);
+        })
+        .attr("width", 3)
+        .attr("height", 3);
+
+    stage.append("div")
+        .classed("annotations", true)
+        .style("left", margin.left + "px")
+      .selectAll(".annotation")
+        .data(function(d) { return d.annotations; })
+      .enter().append("div")
+        .classed("annotation", true)
+        .text(function(d) { return d.text; })
+        .style("width", function(d) { return d.width + "px"; })
+        .style("left", function(d) { return trailerScale(d.trailer_ms) + d.offset + "px"; })
+        .style("top", height + margin.top + missingSectionHeight + 10 + "px");
+
+    svg.append("path")
+        .datum(shotsData.filter(function(d) { return !d.suppress && !d.missing; }))
+        .attr("class", "scatterline")
+        .attr("d", scatterLine);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .call(xAxis)
+      .append("text")
+        .attr("x", 7)
+        .attr("y", -22)
+        .text("Frequence d'utilisation");
+
+ svg.append("g")
+        .attr("class", "x axis")
+        .call(xAxis)
+      .append("text")
+        .attr("x", 7)
+        .attr("y", 0)
+        .text("50");
+
+    var frameLabel = svg.selectAll(".x.axis g:first-of-type text")
+      .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+        .datum(null)
+        .style("display", "none");
+
+    var yAxis = svg.append("g")
+        .attr("class", "y axis");
+
+    yAxis.append("line")
+        .classed("baseline", true)
+        .attr("x1", -margin.left)
+        .attr("y1", movieScale(0))
+        .attr("x2", width + margin.right)
+        .attr("y2", movieScale(0));
+
+    yAxis.append("line")
+        .classed("separator", true)
+        .attr("y1", -margin.top)
+        .attr("y2", height + missingSectionHeight);
+
+    var sectionMarkers = yAxis.selectAll(".section-marker")
+        .data(sections)
+      .enter().append("g")
+        .classed("section-marker", true)
+        .attr("transform", function(d) { return "translate(0," + movieScale(d.ms-1000) + ")"; });
+
+    sectionMarkers.append("rect")
+        .attr("x", trailerScale(0))
+        .attr("y", -height / 3)
+        .attr("width", width + margin.right)
+        .attr("height", height / 3)
+        .style("fill", function(d) { return color(d.ms -1000); });
+
+    sectionMarkers.append("line")
+        .classed("section-line", true)
+        .attr("x1", -margin.left)
+        .attr("x2", width + margin.right);
+
+    sectionMarkers.append("text")
+        .classed("label", true)
+        .attr("y", -height / 6)
+        .attr("dy", ".35em")
+        .attr("x", -15)
+        .text(function(d) { return d.label; });
+
+    var missingSection = yAxis.append("g")
+        .attr("class", "missing-section")
+        .attr("transform", "translate(0," + height + ")");
+
+    missingSection.append("text")
+        .text("Annee")
+        .attr("y", missingSectionHeight / 2)
+        .attr("dy", "0.4em")
+        .attr("x", width)
+
+    missingSection.append("line")
+        .classed("section-line", true)
+        .attr("y1", missingSectionHeight)
+        .attr("y2", missingSectionHeight)
+        .attr("x1", -margin.left)
+        .attr("x2", width + margin.right);
+
+    var cut = svg.selectAll(".cut")
+        .data(shotsData)
+      .enter().append("g")
+        .attr("class", "cut")
+        .on("mouseover", setFrame)
+		.on("click", function(d){window.open('http://perso.telecom-paristech.fr/~mifsud/PafGit/site3/debat_mots.html');})
+        .on("mouseout", resetFrame);
+
+    cut.filter(function(d) { return true/*!d.suppress*/; }).append("rect")
+        .classed("bar", true)
+        .attr("data-id", function(d, i) { return i; })
+        .attr("width", function(d) {
+          return Math.max(trailerScale(d.length_ms) - 1, 1);
+        })
+        .attr("height", barHeight)
+        .attr("rx", 1)
+        .attr("y", function(d) {
+          return movieScale(d.match_ms || 0) - barHeight / 2;
+        })
+        .attr("x", function(d) { return trailerScale(d.start_ms); })
+        .attr("fill", function(d) { return color(d.match_ms || 0); });
+
+    cut.append("rect")
+        .classed("bar-hover", true)
+        .attr("width", function(d) { return trailerScale(d.length_ms); })
+        .attr("height", height + missingSectionHeight - 1)
+        .attr("y", 1)
+        .attr("x", function(d) { return trailerScale(d.start_ms); });
+
+    setFrame(movieData, movieData.key_frame);
+    resetFrame();
+
+    function setFrame(d, i) {
+      frameLabel
+          .classed("frame-label", true)
+          .style("display", null)
+          .text(formatTimecode(d.start_ms))
+          .attr("x", Math.max(6, Math.min(width - frameLabel.node().getComputedTextLength() - 6, trailerScale(d.start_ms))));
+
+      svg.selectAll(".x.axis text")
+          .style("opacity", function(t) { return Math.abs(d.start_ms - t) < 10000 ? 0 : null; });
+
+      movie.select(".thumbnail-image")
+          .style("left", -Math.round(movieData.trailer.thumb_width * (i % frameMosaicColumns) + 2) + "px")
+          .style("top", -Math.round(Math.floor(i / frameMosaicColumns) * frameTipHeight + 2) + "px");
+
+      movie.select(".play")
+          .style("opacity", 0);
+    }
+
+    function resetFrame() {
+      svg.selectAll(".x.axis text")
+          .style("opacity", null);
+
+      frameLabel
+          .style("display", "none");
+
+      movie.select(".play")
+          .style("opacity", 0.5);
+    }
+  }
+
+  function createLightbox() {
+    var w = 720,
+        h = 405,
+        padding = 20;
+
+    var lb = d3.select("#g-graphic").append("div")
+        .classed("lightbox", true)
+        .style("display", "none")
+        .on("click", hideLightbox);
+
+    var lbContent = lb.append("div")
+        .style("position", "absolute")
+        .style("left", "50%")
+        .style("top", "50%");
+
+    var lbFrame = lbContent.append("div")
+        .style("width", w + padding * 2 + "px")
+        .style("height", h + padding * 2 + "px")
+        .style("position", "absolute")
+        .style("left", (-(w + padding * 2)/ 2) + "px")
+        .style("top", (-(h + padding * 2) / 2) + "px")
+        .style("background-color", "black");
+
+    lbFrame.append("div")
+        .attr("id", "trailersVideoPlayerContainer")
+        .style("width", w + "px")
+        .style("height", h + "px")
+      .append("iframe")
+        .attr("width", w)
+        .attr("height", h)
+        .attr("frameborder", 0)
+        .property("allowfullscreen", true)
+        .style("position", "absolute")
+        .style("left", padding + "px")
+        .style("top", padding + "px");
+
+    lbFrame.append("a")
+        .attr("class", "g-close-button")
+        .text("Close")
+  }
+
+  function showLightbox(d) {
+    if (d3.event.metaKey || d3.event.altKey) return;
+
+    d3.select(".lightbox")
+        .style("display", "block")
+      .select("iframe")
+        .attr("src", "http://www.youtube.com/embed/" + d.youtube + "?rel=0&autoplay=1");
+
+    d3.event.preventDefault();
+  }
+
+  function hideLightbox(d) {
+    d3.select(".lightbox")
+        .style("display", "none")
+      .select("iframe")
+        .attr("src", "about:blank");
+  }
+
+})();
+
+</script>
+<!--<![endif]-->
+<!--pipeline: b1a9c2fc1689fd89ecff4a7d2be5e5757716e344 -->    </div><!--close main free form -->
+<div class="insetHFullWidth">
+<div id="interactiveFooter" class="opposingFloatControl wrap">
+<div class="metaData element1">
+</div><!--close .metaData element1 -->
+<div class="element2">
+</div><!--close .element2 -->
+</div><!--close #interactiveFooter -->
+</div><!--close .insetHFullWidth -->
+</div><!--close .ledeStory -->
+</div><!--close .columnGroup -->
+</div><!--close #interactiveShell -->
+</div><!--close #main -->
+</div><!--close #page -->
+</div><!--close #shell -->
+<script type="text/javascript" language="JavaScript" src="http://graphics8.nytimes.com/js/app/homepage/articleCommentCounts.js"></script>
+<!-- ADXINFO classification="Text_Link" campaign="CIG_SURVEY_CrossPlat_June_Desktop_France_NonSubs" priority="5000" isInlineSafe="N" width="0" height="0" --><script language="JavaScript"><!--
+var NYTD = NYTD || {};
+NYTD.RMID = /RMID=([^;]+)/.test(unescape(document.cookie)) ? RegExp.$1 : '';
+NYTD.UserHexID = '';
+function getCookieValue(key) {
+  var cookies = document.cookie.split('; ');
+  for (var i = 0, parts; (parts = cookies[i] && cookies[i].split('=')); i++) {
+    if (decode(parts.shift()) === key) {
+      return decode(parts.join('='));
+    }
+  }
+  return null;
+}
+
+var pageUrl = window.location.href;
+
+function decode(s) {
+  return decodeURIComponent(s.replace(/\+/g, ' '));
+}
+
+var AgentID = getCookieValue('nyt-a');
+
+var w = 500, h = 400;
+if (document.all || document.layers) {
+w = screen.availWidth;
+h = screen.availHeight;
+}
+
+//--></script>
+
+
+
 </div>
-</div>
-            
-            
-            	
-                	
-           
-		
-              
-           
-            
-    
-     </div>
-    <!--1995 end-->
-    <div class="clear"></div>
-    <!-- 2002 start -->
-    <div class="content services" id="menu-3">
-    <div class="container"> <p>2002</p>
-    	
-        </div>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
-    
-    <!-- 2002 end -->
-    <!-- 2007 start -->
-    <div class="content contact" id="menu-5">
-    <div class="container">
-     	<div class="row">
-<p>2007</p>
-        </div>
-    	
-    </div>
-    </div>
-    </div>
-    <!-- 2007 end -->
+      <!-- gallery end -->
+   
 	<!-- footer start -->
     <div class="templatemo_footer">
     	<div class="container">
@@ -164,6 +711,8 @@
                 </a>
             </div>
         </div>
+
+
         </div>
     </div>
     <!-- footer end -->    

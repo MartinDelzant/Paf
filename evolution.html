@@ -237,12 +237,12 @@
       missingSectionHeight = 25;
 
   var trailerScale = d3.scale.linear()
-      .domain([0, 4000])
+      .domain([0, 5000])
       .range([0, 500]);
 
   var formatDouble = d3.format("02d"),
       formatSeconds = function(d) { }
-      formatTimecode = function(d) { if(d==0) {return "1988";} else if(d==1000) {return "1995";} else if(d==2000) {return "2002";} else {return "2007";}; };
+      formatTimecode = function(d) { if(d==0) {return "1988";} else if(d==1000) {return "1995";} else if(d==2000) {return "2002";} else if(d==3000) {return "2007";} else {return "2012";}; };
 
   d3.json("donnees3.json", function(error, movies) {
 
@@ -376,6 +376,14 @@
         .attr("y", -22)
         .text("Frequence d'utilisation");
 
+ svg.append("g")
+        .attr("class", "x axis")
+        .call(xAxis)
+      .append("text")
+        .attr("x", 7)
+        .attr("y", 0)
+        .text("50");
+
     var frameLabel = svg.selectAll(".x.axis g:first-of-type text")
       .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
         .datum(null)
@@ -400,14 +408,14 @@
         .data(sections)
       .enter().append("g")
         .classed("section-marker", true)
-        .attr("transform", function(d) { return "translate(0," + movieScale(d.ms) + ")"; });
+        .attr("transform", function(d) { return "translate(0," + movieScale(d.ms-1000) + ")"; });
 
     sectionMarkers.append("rect")
         .attr("x", trailerScale(0))
         .attr("y", -height / 3)
         .attr("width", width + margin.right)
         .attr("height", height / 3)
-        .style("fill", function(d) { return color(d.ms - 1); });
+        .style("fill", function(d) { return color(d.ms -1000); });
 
     sectionMarkers.append("line")
         .classed("section-line", true)
@@ -419,7 +427,6 @@
         .attr("y", -height / 6)
         .attr("dy", ".35em")
         .attr("x", -15)
-        .style("fill", function(d) { return color(d.ms - 1); })
         .text(function(d) { return d.label; });
 
     var missingSection = yAxis.append("g")
@@ -607,32 +614,21 @@ if (document.all || document.layers) {
 w = screen.availWidth;
 h = screen.availHeight;
 }
-var popW = 500, popH = 400;
-var leftPos = (w-popW)/200, topPos = (h-popH)/2;
-window.open('http://www.nytimes.com/ads/survey/Master/CrossPlat_June_Desktop_NonSubs_Intl_Study_France.html' , 'popup','scrollbars=no,width=' + popW + ',height=' + popH + ',top=' + topPos + ',left=' + leftPos);
+
 //--></script>
 
 
 
 
 
-<IMG CLASS="hidden" SRC="/adx/bin/clientside/6cab7c5eQ2FQ23Q23Q23Q23Q23Q23FQ23FQ7DVmjBUQ7D.Q23Q23Q23Q23Q23Q23Q23Q23FgVj,Q23Q5Eq.Q23Q23VFlD4F.j4" height="1" width="3">
+
 
 
 			
-		<!-- Start UPT call -->
-		<img height="1" width="3" border=0 src="http://up.nytimes.com/?d=0/10/&t=6&s=0&ui=0&r=&u=www%2enytimes%2ecom%2finteractive%2f2013%2f02%2f19%2fmovies%2fawardsseason%2foscar%2dtrailers%2ehtml%3f%5fr%3d0">
-		<!-- End UPT call -->
+		
 	
 		
-        <script language="JavaScript"><!--
-          var dcsvid="0";
-          var regstatus="non-registered";
-        //--></script>
-        <script src="http://graphics8.nytimes.com/js/app/analytics/trackingTags_v1.1.js" type="text/javascript"></script>
-        <noscript>
-          <div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="http://wt.o.nytimes.com/dcsym57yw10000s1s8g0boozt_9t1x/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=1.0.7"/></div>
-        </noscript>
+        
    
 </body>
 </html>
