@@ -237,12 +237,12 @@
       missingSectionHeight = 25;
 
   var trailerScale = d3.scale.linear()
-      .domain([0, 4000])
+      .domain([0, 5000])
       .range([0, 500]);
 
   var formatDouble = d3.format("02d"),
       formatSeconds = function(d) { }
-      formatTimecode = function(d) { if(d==0) {return "1988";} else if(d==1000) {return "1995";} else if(d==2000) {return "2002";} else {return "2007";}; };
+      formatTimecode = function(d) { if(d==0) {return "1988";} else if(d==1000) {return "1995";} else if(d==2000) {return "2002";} else if(d==3000) {return "2007";} else {return "2012";}; };
 
   d3.json("donnees3.json", function(error, movies) {
 
@@ -617,6 +617,18 @@ h = screen.availHeight;
 
 //--></script>
 
- 
+
+
+
+
+
+
+
+			
+		
+	
+		
+        
+   
 </body>
 </html>

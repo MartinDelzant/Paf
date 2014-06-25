@@ -1,10 +1,10 @@
 [
   {
-    "slug": "mot1",
-    "name": "mot1",
+    "slug": "Evolution temporelle de la complexité des débats par la méthode de Flesch-Kincaid",
+    "name": "Evolution temporelle de la complexité des débats par la méthode de Flesch-Kincaid",
     "key_frame": 93,
     "youtube": "tFvMk983Il8",
-    "intro": "commentaire mot1.",
+    "intro": "Note : plus la valeur obtenue par cette méthode est faible, plus il est facile de comprendre le discours. Cependant, une faible valeur de Flesch-Kincaid n'indique pas forcément un discours moins riche",
     "annotations": [
       {
         "trailer_ms": 500,
@@ -33,7 +33,16 @@
         "offset": 0,
         "movie_ms": 1,
         "text": "2007"
+      },
+
+{
+        "trailer_ms": 4500,
+        "width": 210,
+        "offset": 0,
+        "movie_ms": 1,
+        "text": "2012"
       }
+
     ],
     "fps": 29.97002997002997,
     "movie_length_frames": 175620,
@@ -67,6 +76,10 @@
         {
           "start_ms": 3000,
           "match_ms": 50
+        },
+        {
+          "start_ms": 4000,
+          "match_ms": 75
         }
       ]
     }
