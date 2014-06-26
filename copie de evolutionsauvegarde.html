@@ -196,6 +196,13 @@
   .x.axis .tick {
     stroke: #ccc;
   }
+  
+   .xAxis.append("line")
+        .classed("separator", true)
+.x.axis .separator {
+    stroke: #007fff;
+  }
+
   #main #interactiveFooter {
     border-top:1px solid #ddd;
     margin-top:10px;
@@ -381,8 +388,8 @@
         .call(xAxis)
       .append("text")
         .attr("x", 7)
-        .attr("y", 0)
-        .text("100%");
+        .attr("y", 7)
+        .text("50");
 
     var frameLabel = svg.selectAll(".x.axis g:first-of-type text")
       .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
