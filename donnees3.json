@@ -46,7 +46,7 @@
     ],
     "fps": 29.97002997002997,
     "movie_length_frames": 175620,
-    "movie_length_ms": 100,
+    "movie_length_ms": 30,
     "search_bounds": [
       0,
       167083
@@ -62,24 +62,24 @@
       "shots": [
         {
           "start_ms": 0,
-          "match_ms": 0,
+          "match_ms": 20.39,
           "suppress": false
         },
         {
           "start_ms": 1000,
-          "match_ms": 100
+          "match_ms": 15.32
         },
         {
           "start_ms": 2000,
-          "match_ms": 75
+          "match_ms": 9.08
         },
         {
           "start_ms": 3000,
-          "match_ms": 50
+          "match_ms": 5.96
         },
         {
           "start_ms": 4000,
-          "match_ms": 75
+          "match_ms": 4.01
         }
       ]
     }
