@@ -23,11 +23,12 @@ var line = d3.svg.line.radial()
 
 // Chrome 15 bug: <http://code.google.com/p/chromium/issues/detail?id=98951>
 var div = d3.select("#g-cooc").insert("div", "h2")
-    .style("top", "-80px")
-    .style("left", "-160px")
+    .style("top", "-120px")
+    .style("margin-left", "auto")
+	.style("margin-right", "auto")
     .style("width", w + "px")
     .style("height", w + "px")
-    .style("position", "absolute")
+    .style("position", "relative")
     .style("-webkit-backface-visibility", "hidden");
 
 var svg = div.append("svg:svg")
@@ -41,7 +42,7 @@ svg.append("svg:path")
     .attr("d", d3.svg.arc().outerRadius(ry - 120).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
     .on("mousedown", mousedown);
 
-d3.json("../cooc/import/test.json", function(classes) {
+d3.json("http://perso.telecom-paristech.fr/~delzant/PAFTest/PafGit/cooc/import/test.json", function(classes) {
   var nodes = cluster.nodes(packages.root(classes)),
       links = packages.imports(nodes),
       splines = bundle(links);
