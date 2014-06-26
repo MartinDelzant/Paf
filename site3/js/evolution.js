@@ -1,231 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Evolution de la fréquence d'utilisation d'un mot au fil du temps</title>
-</head>
-<body id="interactiveABC" class="interactiveABC">
-<a name="top"></a>
-<div id="shell">
 
-<ul id="memberTools">
-
-<!-- ADXINFO classification="Text_Link" campaign="inyt2014_bar1_singlepanel_digi_euro_487JF" priority="6000" isInlineSafe="Y" width="0" height="0" --><!-- INYT Bar1 20140612.1130 ~dj.paris -->
-<style src="style.css">
-</style>
-
-
-<div id="interactiveFreeFormMain">
-<style>
-  #g-graphic {
-    font-family: arial;
-    padding: 10px;
-  }
-  .lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 10000;
-    background-color: black;
-    background-color: rgba(0,0,0,0.8);
-  }
-  .lightbox .g-close-button {
-    display: block;
-    background: url(http://graphics8.nytimes.com/newsgraphics/2013/01/04/movie-marker/b1a9c2fc1689fd89ecff4a7d2be5e5757716e344/close-button.svg) no-repeat center left;
-    padding-left: 20px;
-    line-height: 30px;
-    width: 200px;
-    height: 30px;
-    text-transform: uppercase;
-    color: #666;
-    position: absolute;
-    top: -30px;
-    left: 0px;
-    cursor: pointer;
-    opacity: 0.7;
-  }
-  .lightbox .g-close-button:hover {
-    opacity: 1;
-  }
-  .movie {
-    border-top: solid 1px #aaa;
-    position: relative;
-    margin: 0 0 20px;
-    padding-top: 25px;
-    height: 440px;
-  }
-  .movie h3 {
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 0.6em;
-  }
-  .movie .intro {
-    font-family: Georgia;
-    color: #666;
-    line-height: 1.5em;
-    font-size: 15px;
-    width: 640px;
-  }
-  .thumbnail-frame {
-    position: absolute;
-    top: 25px;
-    padding: 6px;
-    background-color: rgba(0,0,0,0.2);
-    cursor: pointer;
-  }
-  .thumbnail-frame .play {
-    width: 35px;
-    height: 35px;
-    background: #333 url(http://graphics8.nytimes.com/newsgraphics/2013/01/04/movie-marker/b1a9c2fc1689fd89ecff4a7d2be5e5757716e344/triangle.png) no-repeat 9px center;
-    background-size: 17px;
-    border: solid 1px white;
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    opacity: 0.5;
-    border-radius: 4px;
-    text-transform: uppercase;
-    color: white;
-    font-size: 11px;
-    font-weight: normal;
-    line-height: 35px;
-    overflow: hidden;
-    -webkit-transition-property: width, opacity;
-    -webkit-transition-duration: 0.2s, 0.3s;
-    -moz-transition-property: width, opacity;
-    -moz-transition-duration: 0.2s, 0.3s;
-    transition-property: width, opacity;
-    transition-duration: 0.2s, 0.3s;
-  }
-  .thumbnail-frame .label {
-    position: absolute;
-    left: 35px;
-  }
-  .thumbnail-frame:hover .play {
-    width: 90px;
-  }
-  .thumbnail-crop {
-    overflow: hidden;
-    position: relative;
-  }
-  .thumbnail-image {
-    position: absolute;
-  }
-  .annotation {
-    position: absolute;
-    font-size: 11px;
-    line-height: 1.4em;
-    color: #999;
-  }
-  .annotation-pointer {
-    stroke: #bbb;
-    stroke-opacity: 0.5;
-    shape-rendering: crispEdges;
-  }
-  .annotation-pointer rect {
-    fill: #666;
-    stroke: none;
-  }
-  .annotation-pointer path {
-    fill: none;
-    stroke: #999;
-  }
-  .movie svg, .annotations {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .stage {
-    height: 250px;
-    position: absolute;
-    top: 170px;
-  }
-  .bar-hover {
-    fill-opacity: 0;
-    shape-rendering: crispEdges;
-    pointer-events: all;
-  }
-  .cut:hover .bar {
-    stroke: #000;
-    stroke-width: 1.5px;
-  }
-  .bar-hover:hover {
-    fill-opacity: 0.05;
-  }
-  .axis {
-    shape-rendering: crispEdges;
-    font-size: 10px;
-    fill: #aaa;
-  }
-  .scatterline {
-    fill: none;
-    stroke: #ccc;
-    shape-rendering: crispEdges;
-  }
-  .domain {
-  }
-  .section-line,
-  .baseline {
-    stroke: #ddd;
-  }
-  .section-line {
-    stroke-dasharray: 3,3;
-  }
-  .y.axis .separator {
-    stroke: #aaa;
-  }
-  .y.axis .label {
-    font-weight: bold;
-    font-size: 11px;
-    fill: #000;
-    text-anchor: end;
-  }
-  .y.axis .missing-section text {
-    fill: #aaa;
-    font-size: 11px;
-    text-anchor: end;
-  }
-  .y.axis .section-marker rect {
-    fill-opacity: .07;
-  }
-  .axis path {
-    display: none;
-  }
-  .x.axis .tick {
-    stroke: #ccc;
-  }
-  #main #interactiveFooter {
-    border-top:1px solid #ddd;
-    margin-top:10px;
-    padding-top:12px;
-  }
-  #main div.storyHeader h1 {
-    font-size: 26px;
-    margin-bottom: 8px;
-    margin-top: 35px;
-    text-align: center;
-  }
-  #main div.storySummary {
-    width: 800px;
-    margin: 0 auto 20px;
-    text-align: center;
-    font-size: 1.1em;
-    line-height: 1.5em;
-  }
-</style>
-<div id="g-graphic"></div>
-<!--[if lte IE 8]>
-  <img src="http://graphics8.nytimes.com/newsgraphics/2013/01/04/movie-marker/b1a9c2fc1689fd89ecff4a7d2be5e5757716e344/fallback.png" alt="chart" class="nytg-fallback">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-<script src="d3.v3.min.js"></script>
-<script>
-
-var globaldata = [{mot:"hollande", debat: [20, 50, 64]},
-		  {mot:"securite", debat : [12, 5, 57]}
+// La variable globaldata pourra être chargée depuis un fichier csv/json par exemple. 
+var globaldata = [{mot: "hollande", debat: [20, 10 , 15, 5]},
+		  {mot: "securite", debat : [12, 5, 18, 20]}
 		 ];
+
+//Il faut avoir "styleoratoire" pour la fenetre qui montre la complexite : 
+
+globaldata.push({mot: "styleoratoire", debat: [20.39, 15, 10, 5, 4]});
 
 function getMot( mot){
     var i =0 ;
@@ -251,50 +32,77 @@ function fun1(notredata){
   var barHeight = 8,
       missingSectionHeight = 25;
 
-  var trailerScale = d3.scale.linear()
-      .domain([0, 5000])
-      .range([0, 500]);
-
   var formatDouble = d3.format("02d"),
       formatSeconds = function(d) { }
-      formatTimecode = function(d) { if(d==0) {return "1988";} else if(d==1000) {return "1995";} else if(d==2000) {return "2002";} else if(d==3000) {return "2007";} else {return "2012";}; };
+      formatTimecode = function(d) { 
+	  if(d==0) {
+	      return "1988";
+	  } else if(d==1000) {
+	      return "1995";
+	  } else if(d==2000) {
+	      return "2002";
+	  } else {
+	      return "2007";
+	  }  
+      };
+    
+    var style = (notredata.mot === "styleoratoire");
 
- 
+    var file = "donneesMots.json";
+    if(style){
+	file = "donnees3.json"
+    }
+//Taille différente selon le graphe : 
+    var maxdom = 0 ; 
+    if(style){
+	maxdom=5000;    
+    }
+    else{
+	maxdom=4000;
+    }
 
-  d3.json("donnees3.json", function(error, movies) {
+ var trailerScale = d3.scale.linear()
+      .domain([0, maxdom])
+      .range([0, 500]);
+    
+    d3.json(file, function(error, movies) {
+	
+	console.log(movies);
+	if(!style){
 
-	      movies[0].name = notredata.mot ;
+	    movies[0].name += notredata.mot ;	
+	    
+	    var i = 0 ; 
+	    for(i=0; i<4 ; i++){
+		movies[0].trailer.shots[i].match_ms = notredata.debat[i];
+	    }
+	}
 
-	      var i = 0 ; 
-	      for(i=0; i<4 ; i++){
-	                         movies[0].trailer.shots[i].match_ms = notredata.debat[i];
-	      }
+	var movie = d3.select("#g-graphic").selectAll(".movie")
+            .data(movies)
+	    .enter().append("div")
+            .attr("class", "movie");
+	
+	movie.append("h3")
+            .text(function(d) { return d.name; });
+	
+	movie.append("p")
+            .classed("intro", true)
+            .html(function(d) { return d.intro; });
+	
+	movie.each(renderMovie);
+	
+	d3.selectAll(".x.axis g text")
+            .style("text-anchor", "start")
+            .attr("x", 7)
+            .attr("y", -7)
+	
+	d3.selectAll(".x.axis .tick.minor")
+            .attr("y2", -4)
+	
+	createLightbox();
 
-    var movie = d3.select("#g-graphic").selectAll(".movie")
-        .data(movies)
-      .enter().append("div")
-        .attr("class", "movie");
-
-    movie.append("h3")
-        .text(function(d) { return d.name; });
-
-    movie.append("p")
-        .classed("intro", true)
-        .html(function(d) { return d.intro; });
-
-    movie.each(renderMovie);
-
-    d3.selectAll(".x.axis g text")
-        .style("text-anchor", "start")
-        .attr("x", 7)
-        .attr("y", -7)
-
-    d3.selectAll(".x.axis .tick.minor")
-        .attr("y2", -4)
-
-    createLightbox();
-
-  });
+    });
 
   function renderMovie(movieData, i) {
     var movie = d3.select(this),
@@ -593,68 +401,11 @@ function fun1(notredata){
 
 };
 
-fun1(globaldata[1]);
+var motAffiche = window.location.hash.slice(1) ;
 
-</script>
-<!--<![endif]-->
-<!--pipeline: b1a9c2fc1689fd89ecff4a7d2be5e5757716e344 -->    </div><!--close main free form -->
-<div class="insetHFullWidth">
-<div id="interactiveFooter" class="opposingFloatControl wrap">
-<div class="metaData element1">
-</div><!--close .metaData element1 -->
-<div class="element2">
-</div><!--close .element2 -->
-</div><!--close #interactiveFooter -->
-</div><!--close .insetHFullWidth -->
-</div><!--close .ledeStory -->
-</div><!--close .columnGroup -->
-</div><!--close #interactiveShell -->
-</div><!--close #main -->
-</div><!--close #page -->
-</div><!--close #shell -->
-<script type="text/javascript" language="JavaScript" src="http://graphics8.nytimes.com/js/app/homepage/articleCommentCounts.js"></script>
-<!-- ADXINFO classification="Text_Link" campaign="CIG_SURVEY_CrossPlat_June_Desktop_France_NonSubs" priority="5000" isInlineSafe="N" width="0" height="0" --><script language="JavaScript"><!--
-var NYTD = NYTD || {};
-NYTD.RMID = /RMID=([^;]+)/.test(unescape(document.cookie)) ? RegExp.$1 : '';
-NYTD.UserHexID = '';
-function getCookieValue(key) {
-  var cookies = document.cookie.split('; ');
-  for (var i = 0, parts; (parts = cookies[i] && cookies[i].split('=')); i++) {
-    if (decode(parts.shift()) === key) {
-      return decode(parts.join('='));
-    }
-  }
-  return null;
+if(motAffiche.length === 0){
+    fun1(getMot("styleoratoire"));
 }
-
-var pageUrl = window.location.href;
-
-function decode(s) {
-  return decodeURIComponent(s.replace(/\+/g, ' '));
+else{
+    fun1(getMot(motAffiche));
 }
-
-var AgentID = getCookieValue('nyt-a');
-
-var w = 500, h = 400;
-if (document.all || document.layers) {
-w = screen.availWidth;
-h = screen.availHeight;
-}
-
-//--></script>
-
-
-
-
-
-
-
-
-			
-		
-	
-		
-        
-   
-</body>
-</html>

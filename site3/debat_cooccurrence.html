@@ -11,6 +11,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/templatemo_misc.css">
     <link href="css/templatemo_style.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/coocstyle.css"/>		    
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
       
     <script src="js/jquery-1.10.2.min.js"></script> 
@@ -29,19 +30,16 @@
 		}
     }
   	</script>
- <script src="d3.min.js"></script>
-<script src="d3.layout.cloud.js"></script>
-<script src="wordcloud1988.js"></script> 
-<script src="wordcloud1995.js"></script> 
+ 
   </head>
   <body>
   	<div class="site-header">
 		<div class="main-navigation">
 			<div class="responsive_menu">
 				<ul>
-					<li><a class="show-1 templatemo_home" href="#">1988</a></li>
-					<li><a class="show-2 templatemo_page2" href="#">1995</a></li>
-					<li><a class="show-3 templatemo_page3" href="#">2002</a></li>
+					<li><a class="show-1 templatemo_home" href="#">1981</a></li>
+					<li><a class="show-2 templatemo_page2" href="#">1988</a></li>
+					<li><a class="show-3 templatemo_page3" href="#">1995</a></li>
 					<li><a class="show-5 templatemo_page5" href="#">2007</a></li>
 				</ul>
 			</div>
@@ -59,13 +57,13 @@
 						<ul>
 							<li><a class="show-1 templatemo_home" href="#">
                             	<span class="fa fa-users"></span>
-                                1988</a></li>
+                                1981</a></li>
 							<li><a class="show-2 templatemo_page2" href="#">
                             	<span class="fa fa-users"></span>
-                          	1995</a></li>
+                          	1988</a></li>
 							<li><a class="show-3 templatemo_page3" href="#">
                             	<span class="fa fa-users"></span>
-                            	2002</a></li>
+                            	1995</a></li>
 							<li><a class="show-5 templatemo_page5" href="#">
                             	<span class="fa fa-users"></span>
                                 2007</a></li>
@@ -76,20 +74,17 @@
 		</div> <!-- /.main-navigation -->
 	</div> <!-- /.site-header -->
     <div id="menu-container">
+      
     <!-- gallery start -->
-    <div class="content homepage" id="menu-1">
-    <div class="container">
-	   <p><strong><em>1988</em></strong></p>
-	
-	    <div id="wc1988"></div>
-
-	</div>
-    <div class="container">
-    	<div class="row">
-        	
-        </div>
-    </div>
-    </div>
+      <div id="g-cooc">
+    <h2>
+      Representation des mots<br/> que les candidats associent
+    </h2>
+    <div style="position:relative;bottom:0;font-size:14px;">tension: <input style="position:relative;top:3px;" type="range" min="0" max="100" value="85"></div>
+    <script type="text/javascript" src="js/d3.v2.min.js"></script>
+    <script type="text/javascript" src="js/packages.js"></script>
+    <script type="text/javascript" src="js/cooc.js"></script>
+</div>
       <!-- gallery end -->
     <!-- team start -->
     <div class="content team" id="menu-2">
@@ -97,20 +92,9 @@
 	</div>
 	<div class="row">  
  	<div class="templatemo_ourteam">
-     		<div id="wc1995"></div>
             	
 </div>
 </div>
-            
-            
-            	
-                	
-           
-		
-              
-           
-            
-    
      </div>
     <!--team end-->
     <div class="clear"></div>
