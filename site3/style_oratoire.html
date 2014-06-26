@@ -118,7 +118,7 @@
   }
   .movie .intro {
     font-family: Georgia;
-    color: #e7e7e7;
+    color: #666;
     line-height: 1.5em;
     font-size: 15px;
     width: 640px;
@@ -224,7 +224,6 @@
   .section-line,
   .baseline {
     stroke: #ddd;
-    color: #e7e7e7;
   }
   .section-line {
     stroke-dasharray: 3,3;
@@ -252,6 +251,13 @@
   .x.axis .tick {
     stroke: #ccc;
   }
+  
+   .xAxis.append("line")
+        .classed("separator", true)
+.x.axis .separator {
+    stroke: #007fff;
+  }
+
   #main #interactiveFooter {
     border-top:1px solid #ddd;
     margin-top:10px;
@@ -298,7 +304,7 @@
 
   var formatDouble = d3.format("02d"),
       formatSeconds = function(d) { }
-      formatTimecode = function(d) { if(d==0) {return "1988";} else if(d==1000) {return "1995";} else if(d==2000) {return "2002";} else if(d==3000) {return "2007";} else {return "2012";}; };
+      formatTimecode = function(d) { if(d==0) {return "1981";} else if(d==1000) {return "1988";} else if(d==2000) {return "1995";} else if(d==3000) {return "2007";} else {return "2012";}; };
 
   d3.json("donnees3.json", function(error, movies) {
 
@@ -437,7 +443,7 @@
         .call(xAxis)
       .append("text")
         .attr("x", 7)
-        .attr("y", 0)
+        .attr("y", 7)
         .text("50");
 
     var frameLabel = svg.selectAll(".x.axis g:first-of-type text")
@@ -506,9 +512,7 @@
         .data(shotsData)
       .enter().append("g")
         .attr("class", "cut")
-        .on("mouseover", setFrame)
-		.on("click", function(d){window.open('http://perso.telecom-paristech.fr/~mifsud/PafGit/site3/debat_mots.html');})
-        .on("mouseout", resetFrame);
+        ;
 
     cut.filter(function(d) { return true/*!d.suppress*/; }).append("rect")
         .classed("bar", true)
@@ -529,9 +533,15 @@
         .attr("width", function(d) { return trailerScale(d.length_ms); })
         .attr("height", height + missingSectionHeight - 1)
         .attr("y", 1)
-        .attr("x", function(d) { return trailerScale(d.start_ms); });
+        .attr("x", function(d) { return trailerScale(d.start_ms); })
+	.on("mouseover", setFrame)
+	.on("click", function(d){ if(d.start_ms==0){window.open('http://perso.telecom-paristech.fr/~mifsud/PafGit/site3/debat_mots.html#1981');} else if(d.start_ms==1000){window.open('http://perso.telecom-paristech.fr/~mifsud/PafGit/site3/debat_mots.html#1988');} else if(d.start_ms==2000){window.open('http://perso.telecom-paristech.fr/~mifsud/PafGit/site3/debat_mots.html#1995');} else if(d.start_ms==3000){window.open('http://perso.telecom-paristech.fr/~mifsud/PafGit/site3/debat_mots.html#2007');} else if(d.start_ms==1000){window.open('http://perso.telecom-paristech.fr/~mifsud/PafGit/site3/debat_mots.html#2007');} else {window.open('http://perso.telecom-paristech.fr/~mifsud/PafGit/site3/debat_mots.html#2012');}
+})
+	.on("mouseout", resetFrame) ;
 
-    setFrame(movieData, movieData.key_frame);
+
+   
+ setFrame(movieData, movieData.key_frame);
     resetFrame();
 
     function setFrame(d, i) {
@@ -673,44 +683,6 @@ h = screen.availHeight;
 
 //--></script>
 
-
-
-</div>
-   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    </div>
-      <!-- gallery end -->
-   
-	<!-- footer start -->
-    <div class="templatemo_footer">
-    	<div class="container">
-    	<div class="row">
-        	<div class="col-md-9 col-sm-12">Copyright &copy; 2084 Company Name | 
-          	<a rel="nofollow" href="http://www.templatemo.com/page/1">HTML5 Template</a> by 
-            <a rel="nofollow" href="http://www.templatemo.com/preview/templatemo_400_polygon">Polygon</a> | 
-            <a rel="nofollow" href="http://unsplash.com">Photos</a> by Unsplash</div>
-            <div class="col-md-3 col-sm-12 templatemo_rfooter">
-            	  <a href="#">
-                 	<div class="hex_footer">
-					<span class="fa fa-facebook"></span>
-					</div>
-                  </a>
-                  <a href="#">
-                    <div class="hex_footer">
-					 <span class="fa fa-twitter"></span>
-					</div>
-                    </a>
-                  <a href="#">
-                 	<div class="hex_footer">
-					 <span class="fa fa-linkedin"></span>
-					</div>
-                 </a>
-                <a href="#">
-                	<div class="hex_footer">
-					 <span class="fa fa-rss"></span>
-					</div>
-                </a>
-            </div>
-        </div>
 
 
         </div>

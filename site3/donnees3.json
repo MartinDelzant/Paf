@@ -11,21 +11,21 @@
         "width": 280,
         "offset": 0,
         "movie_ms": 1,
-        "text": "1988"
+        "text": "1981"
       },
       {
         "trailer_ms": 1500,
         "width": 210,
         "offset": 0,
         "movie_ms": 1,
-        "text": "1995"
+        "text": "1988"
       },
       {
         "trailer_ms": 2500,
         "width": 150,
         "offset": 0,
         "movie_ms": 1,
-        "text": "2002"
+        "text": "1995"
       },
 {
         "trailer_ms": 3500,
@@ -46,7 +46,7 @@
     ],
     "fps": 29.97002997002997,
     "movie_length_frames": 175620,
-    "movie_length_ms": 50,
+    "movie_length_ms": 30,
     "search_bounds": [
       0,
       167083
@@ -79,7 +79,7 @@
         },
         {
           "start_ms": 4000,
-          "match_ms": 15.01
+          "match_ms": 4.01
         }
       ]
     }

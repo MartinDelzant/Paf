@@ -2,7 +2,7 @@
   var fill = d3.scale.category20();
 var donnees;
 
-d3.csv("hollande.csv", function(d) {
+d3.csv("1988v1.csv", function(d) {
   return {
     text: d.text, 
     size: +d.size
@@ -18,7 +18,7 @@ function traitement(){
       .padding(5)
       .rotate(function() { return ~~ (Math.random()*2) * 90; })
       .font("Impact")
-      .fontSize(function(d) { return d.size; })
+      .fontSize(function(d) { return d.size*15; })
       .on("end", draw)
       .start();
 }
