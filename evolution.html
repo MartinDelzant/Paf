@@ -222,7 +222,22 @@
 <!--[if gt IE 8]><!-->
 <script src="d3.v3.min.js"></script>
 <script>
-(function() {
+
+var globaldata = [{mot:"hollande", debat: [20, 23, 64]},
+      {mot:"securite", debat : [12, 5, 57]}
+      ]
+
+      function getMot( mot){
+      var i =0 ;
+      for(i=0; i<globaldata.length ; i++){
+	if(globaldata[i].mot === mot){
+	return globaldata[i];
+}
+	}
+	};
+
+function fun1(notredata){
+
   var margin = { "top": 30, "right": 0, "bottom": 40, "left": 120 };
 
   var width = 500,
@@ -244,7 +259,16 @@
       formatSeconds = function(d) { }
       formatTimecode = function(d) { if(d==0) {return "1988";} else if(d==1000) {return "1995";} else if(d==2000) {return "2002";} else if(d==3000) {return "2007";} else {return "2012";}; };
 
+ 
+
   d3.json("donnees3.json", function(error, movies) {
+
+	      movies[0].name = notredata.mot ;
+
+	      var i = 0 ; 
+	      for(i=0; i<4 ; i++){
+	                         movies[0].trailer.shots[i].match_ms = notredata.debat[i];
+	      }
 
     var movie = d3.select("#g-graphic").selectAll(".movie")
         .data(movies)
@@ -283,7 +307,7 @@
     shotsData.slice().reverse().forEach(function(shot) {
       shot.length_ms = time_ms - (time_ms = shot.start_ms);
       if (shot.missing || shot.suppress) {
-        shot.match_ms = -1;
+        notredata.freq = -1;
       }
     });
 
@@ -567,7 +591,9 @@
         .attr("src", "about:blank");
   }
 
-})();
+};
+
+fun1(globaldata[0]);
 
 </script>
 <!--<![endif]-->
